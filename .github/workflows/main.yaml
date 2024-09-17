@@ -28,7 +28,7 @@ jobs:
           distribution: "temurin"
           cache: "sbt"
           java-version: 11
-      - uses: coursier/setup-action@v1.3.4
+      - uses: coursier/setup-action@v1.3.6
       - name: Compile
         run: sbt $SBT_JAVA_OPTS -v "compileScoped ${{ matrix.scala-version }} ${{ matrix.target-platform }}"
       - name: Compile docs
